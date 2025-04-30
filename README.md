@@ -8,7 +8,7 @@ Topic: Homework
 
 
 # Business Requirements 1pts:
-Goal: Based on IMDb ratings, analyze and compare three to four movies to determine which one has the highest rating.\
+Goal: Based on IMDb ratings, analyze and compare three to four movies to determine which one has the highest rating.
 
 	•	This will help users quickly identify highly-rated movies.
 	•	Additionally, the analysis will consider the release year of each movie.
@@ -42,7 +42,7 @@ A simple program that allows users to compare movie ratings.
 •	Using two CSV files from IMDb websites.
 
 # Information Architecture 2pts:
-This system enables users to evaluate movie ratings by entering specific movie titles. It will extract information from IMDb, including details such as the primary title, release year, number of votes and IMDb rating score.\
+This system enables users to evaluate movie ratings by entering specific movie titles. It will extract information from IMDb, including details such as the primary title, release year, number of votes and IMDb rating score.
 
 •	Users enter a movie title/name to retrieve its IMDb rating and release year along with the number of votes.
 
@@ -64,9 +64,7 @@ This system enables users to evaluate movie ratings by entering specific movie t
 # Deliverables 1pts:
 •	Links to data sources (https://datasets.imdbws.com/)
 
-•	Data origin: IMDb Non-Commercial Datasets; Customers can access subsets of IMDb data for personal and non-commercial purposes.
-
-(https://developer.imdb.com/non-commercial-datasets/)
+•	Data origin: IMDb Non-Commercial Datasets; Customers can access subsets of IMDb data for personal and non-commercial purposes.(https://developer.imdb.com/non-commercial-datasets/)
 
 •	Data dictionary (Using MS Excel, MS Word)
 
@@ -74,5 +72,4 @@ This system enables users to evaluate movie ratings by entering specific movie t
 
 •	Data Model (Using Draw.io)
 
-•	Accessible IMDb Data Warehouse:
-(https://developer.imdb.com/non-commercial-datasets/)
+•	Accessible IMDb Data Warehouse:(https://developer.imdb.com/non-commercial-datasets/)
