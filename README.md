@@ -31,22 +31,16 @@ A simple program that allows users to compare movie ratings.
 •	Using two CSV files from IMDb websites.
 
 # Information Architecture:
-This system enables users to evaluate movie ratings by entering specific movie titles. It will extract information from IMDb, including details such as the primary title, release year, number of votes and IMDb rating score.
+The information architecture for the Movie Rating Analysis Based on IMDb project illustrates the end-to-end workflow of processing IMDb data to prepare it for analysis and reporting. The project utilizes two main datasets: Title Basic, which includes metadata about movies, and Title Rating, which contains rating information. These datasets are collected from IMDb in CSV format and temporarily stored for initial processing. The data then undergoes a cleaning stage to eliminate missing values and correct formatting issues, followed by a reformatting step where data types are standardized and column names are updated for consistency. In the transformation phase, the cleaned datasets are joined and new attributes are derived, such as computed metrics or normalized formats. Once transformed, the data is consolidated into structured tables and loaded into a centralized data warehouse hosted on Microsoft Azure. This warehouse serves as the foundation for efficient querying and downstream analysis.
 
-•	Users enter a movie title/name to retrieve its IMDb rating and release year along with the number of votes.
-
-•	The system will get necessary details from IMDb’s database.
-
-•In addition, users can analyze and compare movies based on their ratings and release years.
 ![image](https://github.com/user-attachments/assets/73d4b897-9e00-43dc-bd54-67dec77796c9)
 
 
 
 
 # Data Architecture:
-•	When a user inputs a movie title, the system extracts the release year, rating score, and number of votes from IMDb.
+The data architecture represents the overall data pipeline at a high level. It begins with the ingestion of raw IMDb data, which is first stored temporarily before undergoing an integration process. This process includes all steps such as cleaning, transforming, and merging the datasets, as detailed in the information architecture. The integrated data is then loaded into a data warehouse where it is organized and optimized for performance. Finally, the data is made available to visualization tools for building reports, dashboards, and conducting deeper analytical exploration.
 
-•	After that, the data will be processed and analyzed to identify the highest-rated movie.
 ![image](https://github.com/user-attachments/assets/55c3682e-d8b4-4491-b0fa-4228983d1659)
 
 
