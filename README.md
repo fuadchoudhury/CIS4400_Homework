@@ -38,7 +38,8 @@ This system enables users to evaluate movie ratings by entering specific movie t
 •	The system will get necessary details from IMDb’s database.
 
 •In addition, users can analyze and compare movies based on their ratings and release years.
-![image](https://github.com/user-attachments/assets/644f2cdd-d673-46f4-a4e9-2bd734970034)
+![image](https://github.com/user-attachments/assets/73d4b897-9e00-43dc-bd54-67dec77796c9)
+
 
 
 
