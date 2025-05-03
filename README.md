@@ -63,6 +63,13 @@ This system enables users to evaluate movie ratings by entering specific movie t
 
 # Deliverables 1pts:
 •	Links to data sources (https://datasets.imdbws.com/)
+●	Azure Storage Link:
+
+Blob-SAS-Token:
+sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=c&sig=yS7zZiabUpvHN5lEa0zoCvtYR4PVXdtqU21tv6vVvQE%3D
+
+Blob-SAS-URL: https://cis4400datastorage2025.blob.core.windows.net/cis4400homework?sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=c&sig=yS7zZiabUpvHN5lEa0zoCvtYR4PVXdtqU21tv6vVvQE%3D
+
 
 •	Data origin: IMDb Non-Commercial Datasets; Customers can access subsets of IMDb data for personal and non-commercial purposes.(https://developer.imdb.com/non-commercial-datasets/)
 
