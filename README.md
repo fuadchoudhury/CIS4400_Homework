@@ -57,6 +57,7 @@ Python programming language.
 Google CoLab.
 Draw.io.
 Microsoft Azure.
+Snowflake.
 
 
 # Deliverables:
