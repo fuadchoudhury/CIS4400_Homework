@@ -51,6 +51,9 @@ The data architecture represents the overall data pipeline at a high level. It b
 •	Also, a surrogate key is employed for both the fact and dimension tables.
 ![image](https://github.com/user-attachments/assets/d044baad-09de-45c2-b8b5-453cac861e4e)
 
+# Technical Architecture:
+The IMDb Movie Rating Analysis project processes and analyzes movie ratings through a series of steps. First, raw IMDb datasets (`title.basics.csv` and `title.ratings.csv`) are stored in Azure Blob Storage. The data is then loaded into Snowflake, where it is cleaned, transformed, and combined into a consolidated table. Python is used for running queries and generating visualizations for analysis. The architecture ensures efficient data storage, transformation, and scalable analysis, with the option for a front-end interface for user interactions.
+![1](https://github.com/user-attachments/assets/0761c732-4e90-42a5-a25b-4fd9bd5e0643)
 
 # Tools Used:
 Python programming language.
