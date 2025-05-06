@@ -1,0 +1,93 @@
+-- Step 1: Create Tables in Snowflake
+-- Schema: analytics
+
+-- 1. titles table
+CREATE OR REPLACE TABLE analytics.titles (
+  tconst STRING,
+  titleType STRING,
+  primaryTitle STRING,
+  originalTitle STRING,
+  isAdult INT,
+  startYear INT,
+  endYear INT,
+  runtimeMinutes INT,
+  genres STRING
+);
+
+-- 2. ratings table
+CREATE OR REPLACE TABLE analytics.ratings (
+  tconst STRING,
+  averageRating FLOAT,
+  numVotes INT
+);
+
+-- Step 2: Load data from Azure Blob (sample COPY command)
+-- Replace <STORAGE_INTEGRATION> and <SAS_URL> with actual values
+COPY INTO analytics.titles
+FROM '<SAS_URL>/titles/title_basics.csv'
+FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY='"' SKIP_HEADER=1)
+ON_ERROR = 'CONTINUE';
+
+COPY INTO analytics.ratings
+FROM '<SAS_URL>/ratings/title_ratings.csv'
+FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY='"' SKIP_HEADER=1)
+ON_ERROR = 'CONTINUE';
+
+-- Step 3: Create Combined Table
+CREATE OR REPLACE TABLE analytics.movie_combined AS
+SELECT
+  t.tconst,
+  t.titleType,
+  t.primaryTitle,
+  t.originalTitle,
+  t.isAdult,
+  t.startYear,
+  t.runtimeMinutes,
+  t.genres,
+  r.averageRating,
+  r.numVotes
+FROM analytics.titles t
+JOIN analytics.ratings r ON t.tconst = r.tconst
+WHERE t.titleType = 'movie';
+
+-- Step 4: Create Dimension Tables
+
+-- dim_movie
+CREATE OR REPLACE TABLE analytics.dim_movie AS
+SELECT
+  ROW_NUMBER() OVER (ORDER BY tconst) AS movie_id,
+  tconst,
+  primaryTitle AS title,
+  originalTitle,
+  titleType AS type,
+  isAdult,
+  runtimeMinutes,
+  genres
+FROM analytics.movie_combined;
+
+-- dim_date
+CREATE OR REPLACE TABLE analytics.dim_date AS
+SELECT
+  DISTINCT startYear AS year,
+  CONCAT(LEFT(startYear, 3), '0s') AS decade
+FROM analytics.movie_combined
+WHERE startYear IS NOT NULL;
+
+-- Add a DATE_ID to dim_date
+ALTER TABLE analytics.dim_date ADD COLUMN date_id INT;
+
+-- Populate DATE_ID
+UPDATE analytics.dim_date
+SET date_id = ROW_NUMBER() OVER (ORDER BY year);
+
+-- Step 5: Create Fact Table
+CREATE OR REPLACE TABLE analytics.fact_movie_ratings AS
+SELECT
+  ROW_NUMBER() OVER (ORDER BY m.movie_id) AS rating_id,
+  m.movie_id,
+  d.date_id,
+  mc.averageRating AS average_rating,
+  mc.numVotes AS num_votes
+FROM analytics.movie_combined mc
+JOIN analytics.dim_movie m ON mc.tconst = m.tconst
+JOIN analytics.dim_date d ON mc.startYear = d.year;
