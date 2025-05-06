@@ -6,6 +6,8 @@ Topic: Homework
 # Movie Rating Analysis based on IMDB
 This project provides a complete solution for analyzing IMDb movie ratings with cloud technology. It includes steps for extracting, loading, transforming, modeling, and visualizing data to gain insights into movie ratings and viewer behavior over time.
 
+In addition, this project began by collecting and cleaning IMDb movie rating data to analyze and compare movie performance. I modeled the data using a star schema in Snowflake, then visualized it in Tableau. The dashboard helps users easily discover top-rated movies by year or genre. It's effective because it turns raw data into clear, interactive insights for movie lovers and analysts alike.
+
 # Business Requirements:
 Goal: Based on IMDb ratings, analyze and compare three to four movies to determine which one has the highest rating.
 
