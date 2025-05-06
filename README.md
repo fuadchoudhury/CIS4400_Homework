@@ -8,17 +8,24 @@ This project provides a complete solution for analyzing IMDb movie ratings with 
 
 # Business Requirements:
 Goal: Based on IMDb ratings, analyze and compare three to four movies to determine which one has the highest rating.
+
 •	Enable users to quickly discover top-rated movies based on IMDb data.
+
 •	Integrate release year information to give additional context to movie ratings.
+
 •	Support informed decision-making for movie selection through data-driven insights.
 
 # Functional Requirements:
 A simple program that allows users to compare movie ratings.
 
 •	The interface should be user-friendly and provide relevant details.
+
 •	Display the release year along with the rating score for better comparison.
+
 •	Users can filter movies based on year to find top-rated films.
+
 •	Provide the option to compare multiple movies.
+
 •	Include graphical analysis for visual comparison.
 
 # Datasets Used:
@@ -45,7 +52,7 @@ The data architecture represents the overall data pipeline at a high level. It b
 •	Also, a surrogate key is employed for both the fact and dimension tables.
 ![image](https://github.com/user-attachments/assets/d044baad-09de-45c2-b8b5-453cac861e4e)
 
-Star schema design with surrogate keys
+Star schema design with surrogate keys:
 
 Fact and dimension tables prepared for querying
 
@@ -59,20 +66,28 @@ The IMDb Movie Rating Analysis project processes and analyzes movie ratings thro
 
 # Tools Used:
 Azure Blob Storage; for Cloud storage for raw and cleaned datasets
+
 Snowflake; for Cloud data warehouse for ELT & data modeling
+
 SQL; for Data transformation and schema creation
+
 Python; for Data ingestion, validation, and API generation
+
 Power BI / Tableau; for Data visualization and dashboard creation
+
 Git & GitHub; for Version control and collaboration
 
 # Data Pipeline Steps:
 1. Data Sourcing:
+
 IMDb datasets sourced from IMDb Datasets. Data dictionary created to describe fields, types, and constraints
 
 2. Data Storage:
+
 Cleaned data uploaded to Azure Blob Storage. Data loaded into Snowflake tables (titles, ratings)
 
 3. Data Transformation (ELT):
+
 Created combined table movie_combined in Snowflake.
 
 Structured dimensional model with:
@@ -86,6 +101,7 @@ dim_date
 Removed duplicates, handled nulls, unified formats, and split dates
 
 4. Data Modeling:
+
 Star schema design with surrogate keys
 
 Fact and dimension tables prepared for querying
@@ -100,12 +116,12 @@ Dashboards built using Power BI / Tableau / AWS QuickSight
 
 # Deliverables:
 •	Links to data sources (https://datasets.imdbws.com/)
-●	Azure Storage Link:
+•	Azure Storage Link:
 
-# Blob-SAS-Token:
+•	Blob-SAS-Token:
 sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=c&sig=yS7zZiabUpvHN5lEa0zoCvtYR4PVXdtqU21tv6vVvQE%3D
 
-# Blob-SAS-URL: https://cis4400datastorage2025.blob.core.windows.net/cis4400homework?sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=c&sig=yS7zZiabUpvHN5lEa0zoCvtYR4PVXdtqU21tv6vVvQE%3D
+•	Blob-SAS-URL: https://cis4400datastorage2025.blob.core.windows.net/cis4400homework?sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=c&sig=yS7zZiabUpvHN5lEa0zoCvtYR4PVXdtqU21tv6vVvQE%3D
 
 
 •	Data origin: IMDb Non-Commercial Datasets; Customers can access subsets of IMDb data for personal and non-commercial purposes.(https://developer.imdb.com/non-commercial-datasets/)
