@@ -58,6 +58,7 @@ Fact and dimension tables prepared for querying
 
 Data warehouse schema: analytics
 ![star_schema](https://github.com/user-attachments/assets/dddd179c-6eec-41fe-8e10-24c5ea9fa2e0)
+![imdb_star_schema](https://github.com/user-attachments/assets/c4d5fda8-2298-47b6-89d8-d146f6d201c0)
 
 
 # Technical Architecture:
@@ -78,15 +79,15 @@ Power BI / Tableau; for Data visualization and dashboard creation
 Git & GitHub; for Version control and collaboration
 
 # Data Pipeline Steps:
-1. Data Sourcing:
+•	Data Sourcing:
 
 IMDb datasets sourced from IMDb Datasets. Data dictionary created to describe fields, types, and constraints
 
-2. Data Storage:
+•	Data Storage:
 
 Cleaned data uploaded to Azure Blob Storage. Data loaded into Snowflake tables (titles, ratings)
 
-3. Data Transformation (ELT):
+•	Data Transformation (ELT):
 
 Created combined table movie_combined in Snowflake.
 
@@ -100,7 +101,7 @@ dim_date
 
 Removed duplicates, handled nulls, unified formats, and split dates
 
-4. Data Modeling:
+•	Data Modeling:
 
 Star schema design with surrogate keys
 
@@ -109,7 +110,7 @@ Fact and dimension tables prepared for querying
 Data warehouse schema: analytics
 ![star_schema](https://github.com/user-attachments/assets/dfa2c7e3-82ef-4f1a-9e08-b2856ac6f894)
 
-5. Serving Data
+•	Serving Data
 Dashboards built using Power BI / Tableau / AWS QuickSight
 ![data_flow](https://github.com/user-attachments/assets/7a0f7367-c2f5-41f5-b17c-c77cd0ab4b93)
 
@@ -126,10 +127,10 @@ sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=
 
 •	Data origin: IMDb Non-Commercial Datasets; Customers can access subsets of IMDb data for personal and non-commercial purposes.(https://developer.imdb.com/non-commercial-datasets/)
 
-•	Data dictionary (Using MS Excel, MS Word)
+•	Data dictionary: (Using MS Excel, MS Word)
 
-•	Git repository Link (https://github.com/fuadchoudhury/CIS4400_Homework)
+•	Git repository Link: (https://github.com/fuadchoudhury/CIS4400_Homework)
 
-•	Data Model (Using Draw.io)
+•	Data Model/Diagrams: (Using Draw.io, Pythonvon Google Colab)
 
 •	Accessible IMDb Data Warehouse:(https://developer.imdb.com/non-commercial-datasets/)
