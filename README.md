@@ -51,14 +51,15 @@ The data architecture represents the overall data pipeline at a high level. It b
 
 •	Also, a surrogate key is employed for both the fact and dimension tables.
 ![image](https://github.com/user-attachments/assets/d044baad-09de-45c2-b8b5-453cac861e4e)
+![imdb_star_schema](https://github.com/user-attachments/assets/c4d5fda8-2298-47b6-89d8-d146f6d201c0)
 
 Star schema design with surrogate keys:
 
-Fact and dimension tables prepared for querying
+Fact and dimension tables prepared for querying.
 
 Data warehouse schema: analytics
 ![star_schema](https://github.com/user-attachments/assets/dddd179c-6eec-41fe-8e10-24c5ea9fa2e0)
-![imdb_star_schema](https://github.com/user-attachments/assets/c4d5fda8-2298-47b6-89d8-d146f6d201c0)
+
 
 
 # Technical Architecture:
