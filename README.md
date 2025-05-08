@@ -52,7 +52,9 @@ The data architecture represents the overall data pipeline at a high level. It b
 •	The data warehouse is composed of a fact table that includes ratings, votes, and the year, along with dimension tables that classify movies based on their release year. 
 
 •	Also, a surrogate key is employed for both the fact and dimension tables.
-![image](https://github.com/user-attachments/assets/d044baad-09de-45c2-b8b5-453cac861e4e)
+![image](https://github.com/user-attachments/assets/36afbebf-8cc2-4418-b576-db00cc6fea05)
+
+Additional:
 ![image](https://github.com/user-attachments/assets/7545d287-47a7-46da-8e03-d5614811568c)
 
 
