@@ -54,9 +54,6 @@ The data architecture represents the overall data pipeline at a high level. It b
 •	Also, a surrogate key is employed for both the fact and dimension tables.
 ![image](https://github.com/user-attachments/assets/36afbebf-8cc2-4418-b576-db00cc6fea05)
 
-Additional:
-![image](https://github.com/user-attachments/assets/7545d287-47a7-46da-8e03-d5614811568c)
-
 
 Star schema design with surrogate keys:
 
