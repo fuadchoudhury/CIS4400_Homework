@@ -77,7 +77,7 @@ SQL; for Data transformation and schema creation
 
 Python; for Data ingestion, validation, and API generation
 
-Power BI / Tableau; for Data visualization and dashboard creation
+Tableau; for Data visualization and dashboard creation
 
 Git & GitHub; for Version control and collaboration
 
@@ -86,13 +86,9 @@ Git & GitHub; for Version control and collaboration
 
 IMDb datasets sourced from IMDb Datasets. Data dictionary created to describe fields, types, and constraints
 
-•	Data Storage:
+•	Data Storage: Cleaned data uploaded to Azure Blob Storage. Data loaded into Snowflake tables (titles, ratings)
 
-Cleaned data uploaded to Azure Blob Storage. Data loaded into Snowflake tables (titles, ratings)
-
-•	Data Transformation (ELT):
-
-Created combined table movie_combined in Snowflake.
+•	Data Transformation (ELT): Created combined table movie_combined in Snowflake.
 
 Structured dimensional model with:
 
@@ -106,20 +102,31 @@ Removed duplicates, handled nulls, unified formats, and split dates
 
 •	Data Modeling:
 
-Star schema design with surrogate keys
-
-Fact and dimension tables prepared for querying
+Star schema design with surrogate keys. Fact and dimension tables prepared for querying
 
 Data warehouse schema: analytics
 ![star_schema](https://github.com/user-attachments/assets/dfa2c7e3-82ef-4f1a-9e08-b2856ac6f894)
 
 •	Serving Data
-Dashboards built using Power BI / Tableau / AWS QuickSight
+Dashboards built using Tableau
 ![data_flow](https://github.com/user-attachments/assets/7a0f7367-c2f5-41f5-b17c-c77cd0ab4b93)
 
+# Data Visualization Screenshot:
+![image](https://github.com/user-attachments/assets/5a85bc86-dfbd-47a1-8a28-4a74b96f30c2)
+It’s done by Tableau Public to the exported CSV datasets and created interactive visualizations.
+
+Visualizations:
+
+1.	Top 10 Movies by Average Rating (Bar Chart with filter > 100 votes)
+
+2.	Movie Ratings and Votes Over Year (Line Chart with release year)
+
+3.	Movie Ratings and Votes by Genre (Column Chart)
+
+Filter: Global filter added for year range.
 
 # Deliverables:
-•	Links to data sources (https://datasets.imdbws.com/)
+•	Links to data sources (https://datasets.imdbws.com/)\
 •	Azure Storage Link:
 
 •	Blob-SAS-Token:
@@ -132,8 +139,10 @@ sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=
 
 •	Data dictionary: (Using MS Excel, MS Word)
 
-•	Git repository Link: (https://github.com/fuadchoudhury/CIS4400_Homework)
+•	This Git repository Link: (https://github.com/fuadchoudhury/CIS4400_Homework)
 
-•	Data Model/Diagrams: (Using Draw.io, Pythonvon Google Colab)
+•	Data Model/Diagrams: (Using Draw.io)
+
+•	Data Warehouse: Created in AWS Redshift; since snowflake used for create, populate, structure tables and verify dimensional model and connect to Tableau for visualization.
 
 •	Accessible IMDb Data Warehouse:(https://developer.imdb.com/non-commercial-datasets/)
