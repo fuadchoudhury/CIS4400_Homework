@@ -1,0 +1,26 @@
+#An api that will generate a csv file that contains a summary of the data
+
+
+import pandas as pd
+
+# Load CSVs (assumes they are in the same folder)
+movies = pd.read_csv("dim_movie.csv")
+ratings = pd.read_csv("fact_movie_ratings.csv")
+dates = pd.read_csv("dim_date.csv")
+
+# Merge datasets
+df = ratings.merge(movies, on="movie_id").merge(dates, on="date_id")
+
+# Filter for fairness: only movies with more than 100 votes
+filtered = df[df["numVotes"] > 100]
+
+# Get top 10 movies by average rating
+top10 = filtered.sort_values("averageRating", ascending=False).head(10)
+
+# Select relevant columns
+summary = top10[["original_title", "averageRating", "numVotes", "year"]]
+
+# Save summary to CSV
+summary.to_csv("top10_movies_summary.csv", index=False)
+
+print("Summary CSV generated: top10_movies_summary.csv")
