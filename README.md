@@ -126,7 +126,8 @@ Visualizations:
 Filter: Global filter added for year range.
 
 # Deliverables:
-•	Links to data sources (https://datasets.imdbws.com/)\
+•	Links to data sources (https://datasets.imdbws.com/)
+
 •	Azure Storage Link:
 
 •	Blob-SAS-Token:
@@ -139,10 +140,10 @@ sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=
 
 •	Data dictionary: (Using MS Excel, MS Word)
 
-•	This Git repository Link: (https://github.com/fuadchoudhury/CIS4400_Homework)
-
 •	Data Model/Diagrams: (Using Draw.io)
 
 •	Data Warehouse: Created in AWS Redshift; since snowflake used for create, populate, structure tables and verify dimensional model and connect to Tableau for visualization.
+
+•	This Git repository Link: (https://github.com/fuadchoudhury/CIS4400_Homework)
 
 •	Accessible IMDb Data Warehouse:(https://developer.imdb.com/non-commercial-datasets/)
