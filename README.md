@@ -110,6 +110,10 @@ Data warehouse schema: analytics
 •	Serving Data
 Dashboards built using Tableau
 ![data_flow](https://github.com/user-attachments/assets/7a0f7367-c2f5-41f5-b17c-c77cd0ab4b93)
+# Connection to Data Store (Cloud Storage):
+
+This project worked with IMDb datasets that were likely downloaded as CSV files (public data), cleaned locally or via scripts, and then uploaded them to Snowflake, which is a cloud-based data store and data warehouse.\
+This qualifies as connecting to a cloud storage/data store rather than scraping or using a live API.
 
 # Data Visualization Screenshot:
 ![image](https://github.com/user-attachments/assets/5a85bc86-dfbd-47a1-8a28-4a74b96f30c2)
