@@ -77,7 +77,7 @@ SQL; for Data transformation and schema creation
 
 Python; for Data ingestion, validation, and API generation
 
-Tableau; for Data visualization and dashboard creation
+Tableau Public; for Data visualization and dashboard creation
 
 Git & GitHub; for Version control and collaboration
 
@@ -108,7 +108,7 @@ Data warehouse schema: analytics
 ![star_schema](https://github.com/user-attachments/assets/dfa2c7e3-82ef-4f1a-9e08-b2856ac6f894)
 
 •	Serving Data
-Dashboards built using Tableau
+Dashboards built using Tableau Public
 ![data_flow](https://github.com/user-attachments/assets/7a0f7367-c2f5-41f5-b17c-c77cd0ab4b93)
 # Connection to Data Store (Cloud Storage):
 
@@ -117,7 +117,7 @@ This qualifies as connecting to a cloud storage/data store rather than scraping 
 
 •	Cloud Storage File Link: https://drive.google.com/drive/folders/1nV5X4a3WoKvv_7XRHbtZBIW-cTH1VX4B?usp=sharing
 
-•	The CSV files used in Tableau were exported and uploaded to Google Drive as part of cloud storage.
+•	The CSV files used in Tableau Public were exported and uploaded to Google Drive as part of cloud storage.
 
 # IMDb Movie Ratings Project – Cloud Storage Files
 
@@ -129,7 +129,7 @@ Files:
 2. dim_movie.csv – Includes movie metadata such as title, runtime, and genres.\
 3. dim_date.csv – Provides structured date breakdown used for temporal analysis.
 
-All files are in CSV format and ready for use in Tableau or any data visualization tool.
+All files are in CSV format and ready for use in Tableau Public; data visualization tool.
 
 Prepared by: Fuad Choudhury, Date: 05-10-2025
 
@@ -162,11 +162,11 @@ sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=
 
 •	Data origin: IMDb Non-Commercial Datasets; Customers can access subsets of IMDb data for personal and non-commercial purposes.(https://developer.imdb.com/non-commercial-datasets/)
 
-•	Data dictionary: (Using MS Excel, MS Word)
+•	Data dictionary: (Using MS Word, MS Excel)
 
 •	Data Model/Diagrams: (Using Draw.io)
 
-•	Data Warehouse: Implemented using Snowflake, where tables were created, structured, and populated. The dimensional model was verified, and the warehouse was connected to Tableau for visualization.
+•	Data Warehouse: Implemented using Snowflake, where tables were created, structured, and populated. The dimensional model was verified, and the warehouse was connected to Tableau Public for visualization.
 
 •	Cloud Storage File Link: https://drive.google.com/drive/folders/1nV5X4a3WoKvv_7XRHbtZBIW-cTH1VX4B?usp=sharing
 
