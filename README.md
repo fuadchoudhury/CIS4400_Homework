@@ -110,6 +110,12 @@ Data warehouse schema: analytics
 •	Serving Data
 Dashboards built using Tableau Public
 ![data_flow](https://github.com/user-attachments/assets/7a0f7367-c2f5-41f5-b17c-c77cd0ab4b93)
+
+# Data Warehouse:
+Implemented using Snowflake, which was used to structure, populate, and validate the dimensional model.\
+Connected to Tableau Public via exported CSVs for interactive data visualization.\
+Redshift was not used as Snowflake served as the primary cloud data warehouse.
+
 # Connection to Data Store (Cloud Storage):
 
 This project worked with IMDb datasets that were likely downloaded as CSV files (public data), cleaned locally or via scripts, and then uploaded them to Snowflake, which is a cloud-based data store and data warehouse.\
