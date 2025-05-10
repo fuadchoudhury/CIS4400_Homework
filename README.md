@@ -115,6 +115,26 @@ Dashboards built using Tableau
 This project worked with IMDb datasets that were likely downloaded as CSV files (public data), cleaned locally or via scripts, and then uploaded them to Snowflake, which is a cloud-based data store and data warehouse.\
 This qualifies as connecting to a cloud storage/data store rather than scraping or using a live API.
 
+•	Cloud Storage File Link: https://drive.google.com/drive/folders/1nV5X4a3WoKvv_7XRHbtZBIW-cTH1VX4B?usp=sharing
+
+•	The CSV files used in Tableau were exported and uploaded to Google Drive as part of cloud storage.
+
+# IMDb Movie Ratings Project – Cloud Storage Files
+
+This folder contains the cleaned and transformed datasets used for the IMDb Ratings Analysis project. These files were sourced from IMDb database and processed using Python, transformed in Snowflake, and later visualized in Tableau Public.
+
+Files:
+
+1. fact_movie_ratings.csv – Contains rating metrics including average rating and vote count.\
+2. dim_movie.csv – Includes movie metadata such as title, runtime, and genres.\
+3. dim_date.csv – Provides structured date breakdown used for temporal analysis.
+
+All files are in CSV format and ready for use in Tableau or any data visualization tool.
+
+Prepared by: Fuad Choudhury, Date: 05-10-2025
+
+•	Cloud Storage File Link: https://drive.google.com/drive/folders/1nV5X4a3WoKvv_7XRHbtZBIW-cTH1VX4B?usp=sharing
+
 # Data Visualization Screenshot:
 ![image](https://github.com/user-attachments/assets/5a85bc86-dfbd-47a1-8a28-4a74b96f30c2)
 It’s done by Tableau Public to the exported CSV datasets and created interactive visualizations.
@@ -146,7 +166,9 @@ sp=r&st=2025-05-03T20:09:13Z&se=2025-05-31T04:09:13Z&spr=https&sv=2024-11-04&sr=
 
 •	Data Model/Diagrams: (Using Draw.io)
 
-•	Data Warehouse: Created in AWS Redshift; since snowflake used for create, populate, structure tables and verify dimensional model and connect to Tableau for visualization.
+•	Data Warehouse: Implemented using Snowflake, where tables were created, structured, and populated. The dimensional model was verified, and the warehouse was connected to Tableau for visualization.
+
+•	Cloud Storage File Link: https://drive.google.com/drive/folders/1nV5X4a3WoKvv_7XRHbtZBIW-cTH1VX4B?usp=sharing
 
 •	This Git repository Link: (https://github.com/fuadchoudhury/CIS4400_Homework)
 
